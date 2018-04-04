@@ -1,0 +1,16 @@
+version: '3'
+services:
+  server:
+    image: jeffcasavant/2006redone-server
+    ports:
+      - "43594:43594"
+  fileserver:
+    image: jeffcasavant/2006redone-fileserver
+    ports:
+      - "43595:43595"
+      - "43596:43596"
+      - "80:80"
+  clientdl:
+    image: jeffcasavant/2006redone-clientdl
+    ports:
+      - "8000:8000"
