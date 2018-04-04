@@ -19,6 +19,11 @@ RUN sed -i "s/SERVER_IP_PLACEHOLDER/$ip/" src/ClientSettings.java
 RUN sed -i "s/SERVER_NAME_PLACEHOLDER/$name/" src/ClientSettings.java
 RUN sed -i "s/SERVER_WEBSITE_PLACEHOLDER/$website/" src/ClientSettings.java
 
+# Build against OpenJDK
+RUN mkdir -p bin
+RUN find . -name "*.java" > sources
+RUN javac -cp "libs/*" -d bin/ @sources
+
 # Package
 RUN mkdir -p /http
 WORKDIR /
