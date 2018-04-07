@@ -29,8 +29,8 @@ import redone.util.ISAACRandomGen;
 
 public class RS2LoginProtocolDecoder extends CumulativeProtocolDecoder {
 	
-	private static final BigInteger RSA_MODULUS = new BigInteger("RSA_MODULUS_PLACEHOLDER");
-	private static final BigInteger RSA_EXPONENT = new BigInteger("RSA_EXPONENT_PLACEHOLDER");
+	private static final BigInteger RSA_MODULUS = new BigInteger(RSA_MODULUS_PLACEHOLDER);
+	private static final BigInteger RSA_EXPONENT = new BigInteger(RSA_EXPONENT_PLACEHOLDER);
 
 
 	/**
