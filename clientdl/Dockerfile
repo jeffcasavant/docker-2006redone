@@ -14,7 +14,7 @@ COPY keys /keys
 WORKDIR /client
 
 # Install key
-RUN sed -i "s/RSA_MODULUS_PLACEHOLDER/\"$(cat /keys/modulus)\", 16/" src/ClientSettings.java
+RUN sed -i "s/RSA_MODULUS_PLACEHOLDER/\"$(cat /keys/modulus)\"/" src/ClientSettings.java
 RUN sed -i "s/SERVER_IP_PLACEHOLDER/\"$ip\"/" src/ClientSettings.java
 RUN sed -i "s/SERVER_NAME_PLACEHOLDER/\"$name\"/" src/ClientSettings.java
 RUN sed -i "s/SERVER_WEBSITE_PLACEHOLDER/\"$website\"/" src/ClientSettings.java

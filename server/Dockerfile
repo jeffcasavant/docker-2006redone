@@ -8,8 +8,8 @@ COPY keys /keys
 WORKDIR /server
 
 # Install keys
-RUN sed -i "s/RSA_MODULUS_PLACEHOLDER/\"$(cat /keys/modulus)\", 16/" src/redone/net/RS2LoginProtocolDecoder.java
-RUN sed -i "s/RSA_EXPONENT_PLACEHOLDER/\"$(cat /keys/exponent)\", 16/" src/redone/net/RS2LoginProtocolDecoder.java
+RUN sed -i "s/RSA_MODULUS_PLACEHOLDER/\"$(cat /keys/modulus)\"/" src/redone/net/RS2LoginProtocolDecoder.java
+RUN sed -i "s/RSA_EXPONENT_PLACEHOLDER/\"$(cat /keys/exponent)\"/" src/redone/net/RS2LoginProtocolDecoder.java
 
 # Build against OpenJDK
 RUN mkdir -p bin
