@@ -4,4 +4,4 @@ The docker-compose.yaml should serve as documentation of what ports you need to 
 
 The `clientdl` container provides a web interface to download the client from.
 
-These images are published at `jeffcasavant/2006redone-<component>:<latest,YYYYMMDDTHHMMSS` weekly.
+These images are published at `jeffcasavant/2006redone-<component>:<latest,YYYYMMDDTHHMMSS>` weekly.
