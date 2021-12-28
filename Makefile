@@ -1,3 +1,5 @@
+all: build run
+
 run:
 	mkdir -p ./characters && docker-compose up -d && docker-compose logs -f
 
