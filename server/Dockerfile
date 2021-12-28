@@ -16,7 +16,7 @@ RUN mkdir -p bin
 RUN find . -name "*.java" > sources
 RUN javac -cp "libs/*" -d bin/ @sources
 
-VOLUME Data
+VOLUME /server/Data
 
 # Expose ports
 EXPOSE 43594

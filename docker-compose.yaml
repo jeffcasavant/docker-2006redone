@@ -1,16 +1,22 @@
+---
 version: '3'
 services:
   server:
     image: jeffcasavant/2006redone-server:latest
     ports:
-      - "43594:43594"
+      - '43594:43594'
+    volumes:
+      - data:/server/Data
   fileserver:
     image: jeffcasavant/2006redone-fileserver:latest
     ports:
-      - "43595:43595"
-      - "43596:43596"
-      - "80:80"
+      - '43595:43595'
+      - '43596:43596'
+      - '80:80'
   clientdl:
     image: jeffcasavant/2006redone-clientdl:latest
     ports:
-      - "8000:8000"
+      - '8000:8000'
+
+volumes:
+  data: {}
