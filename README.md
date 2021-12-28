@@ -12,4 +12,10 @@ This project holds a Dockerized version of the 2006Redone server found [on this 
 * The docker-compose.yaml should serve as documentation of what ports you need to make this work.
 * The `clientdl` container provides a web interface to download the client from.
 * These images are published at `jeffcasavant/2006redone-<component>:<latest,YYYYMMDDTHHMMSS>` weekly.
-* Building the client yourself is required if you want to host it somewhere other than `localhost`.  Build the `clientdl` image and set the [args](https://github.com/jeffcasavant/docker-2006redone/blob/027d0d1661fc86aafd73d1502df8848ee8879506/clientdl/Dockerfile#L4) to what they will be in your deployment.
+
+# Hosting
+
+Building all the images yourself is required if you want to host it somewhere other than `localhost`.  Images auto-built by this repo all use the same keys and the client needs the server's address hardcoded at build time.
+
+* New keys will be auto-generated when you run `make build`.
+* When you build the `clientdl` image, set the [args](https://github.com/jeffcasavant/docker-2006redone/blob/027d0d1661fc86aafd73d1502df8848ee8879506/clientdl/Dockerfile#L4) to what they will be in your deployment.
