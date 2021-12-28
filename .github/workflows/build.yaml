@@ -44,10 +44,10 @@ jobs:
           EXPONENT: ${{ secrets.RS_KEY_EXPONENT }}
           PRIVATE: ${{ secrets.RS_KEY_PRIVATE }}
         run: |
-          mkdir keys
-          echo $MODULUS > keys/modulus
-          echo $EXPONENT > keys/exponent
-          echo $PRIVATE > keys/priv.key
+          mkdir ${{ matrix.image }}/keys
+          echo $MODULUS > ${{ matrix.image }}/keys/modulus
+          echo $EXPONENT > ${{ matrix.image }}/keys/exponent
+          echo $PRIVATE > ${{ matrix.image }}/keys/priv.key
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
