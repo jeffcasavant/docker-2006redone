@@ -8,9 +8,9 @@ keys/priv.key:
 	openssl rsa -text -in keys/priv.key 2>/dev/null | grep privateExponent -A 18 | tail -18 | sed ':a;N;$!ba;s/\n/ /g' | sed 's/\s*//g' | sed 's/://g' | tr '[:lower:]' '[:upper:]' >keys/exponent
 
 keys: keys/priv.key
-	rm -r clientdl/keys
+	rm -rf clientdl/keys
 	cp -r keys clientdl/keys
-	rm -r server/keys
+	rm -rf server/keys
 	cp -r keys server/keys
 
 build: keys
