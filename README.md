@@ -5,10 +5,11 @@ This project holds a Dockerized version of the 2006Redone server found [on this 
 * `docker-compose up`
 * Fetch client.zip from localhost:8000
 * Unzip & run
-* Log in with any username and password - those will become your permanent credentials
+* Log in as an Existing User with any username and password.  Those will become your permanent credentials.
 
 # Notes
 
 * The docker-compose.yaml should serve as documentation of what ports you need to make this work.
 * The `clientdl` container provides a web interface to download the client from.
 * These images are published at `jeffcasavant/2006redone-<component>:<latest,YYYYMMDDTHHMMSS>` weekly.
+* Building the client yourself is required if you want to host it somewhere other than `localhost`.  Build the `clientdl` image and set the [args](https://github.com/jeffcasavant/docker-2006redone/blob/027d0d1661fc86aafd73d1502df8848ee8879506/clientdl/Dockerfile#L4) to what they will be in your deployment.

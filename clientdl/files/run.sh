@@ -1,1 +1,1 @@
-java -cp bin Main
+java -cp "$(dirname "$0")"/bin Main

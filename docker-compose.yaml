@@ -6,7 +6,7 @@ services:
     ports:
       - '43594:43594'
     volumes:
-      - data:/server/Data
+      - ./characters:/server/data/characters
   fileserver:
     image: jeffcasavant/2006redone-fileserver:latest
     ports:
@@ -17,6 +17,3 @@ services:
     image: jeffcasavant/2006redone-clientdl:latest
     ports:
       - '8000:8000'
-
-volumes:
-  data: {}
